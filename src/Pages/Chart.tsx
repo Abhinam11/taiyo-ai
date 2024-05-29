@@ -92,7 +92,7 @@ const Chart = () => {
   console.log("Data", filteredData);
 
   return (
-    <div className="flex flex-col bg-white justify-center items-center w-full h-100 px-4 py-14 gap-4">
+    <div className="flex flex-col bg-gray-800 justify-center items-center w-full h-100 px-4 py-14 gap-4">
       <input
         type="text"
         placeholder="Search By Country"
@@ -102,7 +102,7 @@ const Chart = () => {
       />
 
       {filteredData && filteredData.length === 1 ? (
-        <div className="border px-4 py-4 rounded flex-col gap-4">
+        <div className="border px-4 py-4 bg-white rounded flex-col gap-4">
           <p>{filteredData[0]?.country}</p>
           <p>Active Cases: {filteredData[0]?.active}</p>
           <p>Recovered Cases: {filteredData[0]?.recovered}</p>
@@ -110,9 +110,10 @@ const Chart = () => {
           <ChartComponent activeCases={filteredData[0]?.active} recoveredCases={filteredData[0]?.recovered} deathCases={filteredData[0]?.deaths} />
         </div>
       ) : (
-        <div>
+        <div className="text-white">
           <p>No data Found.</p>
-        </div>
+          <div className="bg-gray-800 text-white justify-center items-center w-full h-screen" ></div>
+        </div> 
       )}
     </div>
   );

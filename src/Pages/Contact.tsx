@@ -32,9 +32,9 @@ const Contact = () => {
   const handleEdit = (id: string, payload: ContactType) => {};
   return (
     <>
-      <h1 className="text-center mt-6 text-lg">Create Contact</h1>
-      <div className="w-full h-screen px-8 py-8 flex justify-center place-items-start">
-        <div className="w-full sm:w-80 md:w-60 lg:w-1/3 xl:w-1/3 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl flex-col justify-center items-center border px-4 py-4 text-center rounded">
+      <h1 className="text-center bg-gray-800 text-white">Create Contact</h1>
+      <div className="w-full h-screen px-8 py-8 flex justify-center place-items-start bg-gray-800">
+        <div className="w-full bg-white sm:w-80 md:w-60 lg:w-1/3 xl:w-1/3 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl flex-col justify-center items-center border px-4 py-4 text-center rounded">
           <Create />
           {/* {data.length && (
             <div className="mt-12 text-center">
